@@ -1,21 +1,16 @@
-- Router: 1941
+UPDATED MD FILE
 
-(connected to Router)
-- Switch1: 2960-24TT
-- Switch2: 2960-24TT
+I used the following commands to set up DHCP on the routers LCI:
 
+For the first switch
 
-(connected to Switch1)
-- PC1: 168.90.05
-- PC2: 168.90.04
-- Laptop1: 168.90.0.2
-- Server1: 168.90.0.3
-- PC5: 168.90.0.6
+ip dhcp pool Switch1
+network 168.90.0.0 255.255.0.0
+default-router 168.90.0.1
 
 
-(connected to Switch2)
-- PC3: 210.3.14.2
-- Server2: 210.3.14.4
-- Server3: 210.3.14.3
-- PC4: 210.3.14.5
+For the second switch
 
+ip dhcp pool Switch2
+network 210.3.14.0 255.255.255.0  
+default-router 210.3.14.1  
